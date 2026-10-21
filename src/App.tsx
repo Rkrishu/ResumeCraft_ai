@@ -33,6 +33,7 @@ import {
   SAMPLE_JOB_DESCRIPTION,
   SAMPLE_PROMPT_INSTRUCTION,
 } from './data/sampleResume';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   // Session State
@@ -448,6 +449,9 @@ export default function App() {
         hasApiKey={hasApiKey}
         onRefreshStatus={checkServerHealth}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
